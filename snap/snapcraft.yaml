@@ -3,7 +3,7 @@ base: core18
 architectures:
   - build-on: [arm64,armhf]
     run-on: [arm64,armhf]
-version: '0.1'
+version: '0.1.1'
 summary: snap Utilits GPIO wiringPi
 description: |
   пакет утелиты для получения информации о выводах gpio raspberry PI.
