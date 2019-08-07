@@ -1,0 +1,23 @@
+name: gpio-rpi
+base: core18
+architectures:
+  - build-on: [arm64,armhf]
+    run-on: [arm64,armhf]
+version: '0.1'
+summary: snap Utilits GPIO wiringPi
+description: |
+  пакет утелиты для получения информации о выводах gpio raspberry PI.
+grade: devel
+confinement: devmode
+
+apps:
+  gpio:
+    command: gpio
+
+parts:
+  gpio:
+    plugin: make
+    makefile: Makefile
+    source: .
+    make-parameters: ["debug=1"]
+    
